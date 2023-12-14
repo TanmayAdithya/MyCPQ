@@ -1,5 +1,6 @@
 import logo from '../assets/MyCPQ Logo.png';
 import HeroBtn from '../components/HeroBtn';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -10,13 +11,16 @@ const LandingPage = () => {
           <img className="w-16 object-cover" src={logo} />
         </a>
         <div className="flex justify-center items-center">
-          <HeroBtn title="GitHub" />
+          <HeroBtn
+            title="GitHub"
+            link="https://github.com/TanmayAdithya/MyCPQ"
+          />
         </div>
       </nav>
       {/* Heading */}
       <div className="flex flex-col flex-1 justify-center items-center mt-24">
-        <p className="my-6 drop-shadow-xl font-custom text-gray-600">
-          An Open Source CPQ Software To Manage Your Business In A Heart Beat{' '}
+        <p className="my-6 drop-shadow-xl font-custom text-gray-600 border-solid border-gray-400 border-2 px-2 py-1 rounded-2xl">
+          An Open Source CPQ Software To Manage Your Business In A Heart Beat
         </p>
         <div className="flex flex-col justify-center items-center mb-8">
           <span className="flex items-center text-8xl font-custom font-medium text-cpq-blue">
@@ -52,7 +56,9 @@ const LandingPage = () => {
             </svg>
           </span>
         </div>
-        <HeroBtn title="Dashboard" />
+        <Link to="/dashboard">
+          <HeroBtn title="Dashboard" />
+        </Link>
       </div>
     </div>
   );

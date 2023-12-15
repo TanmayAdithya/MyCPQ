@@ -49,7 +49,7 @@ const Sidebar = () => {
       <ul className="flex flex-col items-start w-full mt-8 ">
         {sidebarData.map((item) => {
           return (
-            <div key={item.id}>
+            <div className="w-full" key={item.id}>
               <Link className="w-full" to={item.path}>
                 <li className={liClass}>
                   {item.icon}

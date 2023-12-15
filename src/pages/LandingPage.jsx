@@ -7,9 +7,12 @@ const LandingPage = () => {
     <div id="hero" className="flex flex-1 flex-col items-center">
       {/* Navbar */}
       <nav className="flex w-full justify-between box-border px-24 py-6 items-center">
-        <a href="/">
-          <img className="w-16 object-cover" src={logo} />
-        </a>
+        <div className="flex items-center justify-center">
+          <a href="/">
+            <img className="w-12 object-cover" src={logo} />
+          </a>
+          <p className="font-custom ml-1 text-3xl">MyCPQ</p>
+        </div>
         <div className="flex justify-center items-center">
           <HeroBtn
             title="GitHub"

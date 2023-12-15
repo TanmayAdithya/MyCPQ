@@ -4,7 +4,6 @@ const Dashboard = () => {
   return (
     <>
       <Sidebar />
-      <p>test</p>
     </>
   );
 };

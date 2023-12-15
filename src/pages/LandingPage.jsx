@@ -1,4 +1,4 @@
-import logo from '../assets/MyCPQ Logo.png';
+import logo from '../assets/images/MyCPQ Logo.png';
 import HeroBtn from '../components/HeroBtn';
 import { Link } from 'react-router-dom';
 

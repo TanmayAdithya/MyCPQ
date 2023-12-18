@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'light-yellow': '#FFF',
-        'cpq-blue': '#002244',
+        'cpq-blue': '#024',
       },
       fontFamily: {
         custom: ['Bricolage Grotesque', 'sans-serif'],

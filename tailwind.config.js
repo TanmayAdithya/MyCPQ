@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'light-yellow': '#FFFBEB',
+        'light-yellow': '#FFF',
         'cpq-blue': '#002244',
       },
       fontFamily: {

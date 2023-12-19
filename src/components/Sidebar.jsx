@@ -37,20 +37,20 @@ const Sidebar = () => {
     },
   ];
   return (
-    <aside className="relative flex flex-col bg-cpq-blue min-h-screen w-64 items-start p-8">
-      <div className="absolute top-24 left-60 bg-white border-0 rounded-[50%] shadow-xl cursor-pointer hover:-rotate-180 transition-transform  p-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="16"
-          width="10"
-          viewBox="0 0 320 512"
-        >
-          <path
-            fill="#002244"
-            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
-          />
-        </svg>
-      </div>
+    <aside className="relative min-h-screen flex flex-col bg-cpq-blue w-64 items-start px-8 pt-2 pb-8 shadow-sm shadow-gray-500">
+      {/* <div className="absolute left-54 bg-white border-0 rounded-[50%] shadow-sm shadow-gray-700 cursor-pointer hover:-rotate-180 transition-transform  p-3"> */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="16"
+        width="10"
+        viewBox="0 0 320 512"
+      >
+        <path
+          fill="#002244"
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+        />
+      </svg>
+      {/* </div> */}
       <a className="w-full" href="/">
         <div className="flex items-center border-b border-white w-full">
           <img className="w-12 object-cover mr-2" src={logoInverse} />

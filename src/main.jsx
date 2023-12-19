@@ -1,13 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import LandingPage from './pages/LandingPage.jsx';
-
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Customers from './pages/Customers.jsx';
 import Analytics from './pages/Analytics.jsx';
 import Products from './pages/Products.jsx';
 import Overview from './pages/Overview.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import CustomerDetails from './components/CustomerDetails.jsx';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Overview />,
+      },
+      {
+        path: '/dashboard/customers/addcustomer',
+        element: <CustomerDetails />,
       },
     ],
   },

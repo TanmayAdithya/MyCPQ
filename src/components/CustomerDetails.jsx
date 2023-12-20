@@ -16,8 +16,6 @@ const CustomerDetails = () => {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
 
-  console.log(customerName);
-
   const onClick = () => {
     console.log('Submited');
   };
@@ -106,7 +104,7 @@ const CustomerDetails = () => {
         </form>
       </div>
       {/* Address */}
-      <div className="flex pt-4 mt-4 pb-12 border-b-2 border-slate-300 ">
+      <div className="flex pt-4 mt-4 pb-12 border-b-2 border-slate-300">
         <div className="w-full">
           <h1 className="text-xl font-semibold uppercase">Address</h1>
         </div>
@@ -168,46 +166,40 @@ const CustomerDetails = () => {
             </div>
           </div>
           <div className="w-full">
-            <select
-              id="country"
-              name="country"
-              className="mt-2 p-2 w-1/2 border-2 bg-slate-50 border-slate-300 font-medium text-slate-400 rounded-sm focus:outline-none focus:ring focus:border-slate-800 "
-            >
+            <select className="mt-2 p-2 w-1/2 border-2 bg-slate-50 border-slate-300 font-medium text-slate-400 rounded-sm focus:outline-none focus:ring focus:border-slate-800 ">
               <option
                 className="font-semibold text-slate-800"
-                value=""
+                value="India"
                 disabled
               >
-                Country
+                Select a Country
               </option>
+              <option value="India">India</option>
             </select>
           </div>
         </form>
       </div>
       {/* Additional Contacts */}
-      <div className="flex pt-4 mt-4 pb-12 border-b-2 border-slate-300 ">
+      <div className="flex pt-4 mt-4 pb-12 border-b-2 border-slate-300">
         <div className="w-full">
           <h1 className="text-xl font-semibold uppercase">
             Additional Contacts
           </h1>
-          <p></p>
         </div>
-        <form className="w-full">
-          <div className="bg-slate-50 mt-2 p-2 border-2 rounded-sm border-slate-300">
-            <p className="text-slate-600">Phone Number</p>
-            <input
-              className="bg-transparent font-semibold w-full text-slate-800 outline-none"
-              type="text"
-            />
-          </div>
-          <div className="bg-slate-50 mt-2 p-2 border-2 rounded-sm border-slate-300">
-            <p className="text-slate-600">Email</p>
-            <input
-              className="bg-transparent font-semibold w-full text-slate-800 outline-none"
-              type="email"
-            />
-          </div>
-        </form>
+        <div className="w-full flex items-center">
+          <button className="flex items-center px-3 py-1 border-0 rounded-sm bg-slate-600 text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="12"
+              width="12"
+              viewBox="0 0 448 512"
+              className="mr-2 fill-white"
+            >
+              <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+            </svg>
+            Add Additional Contact
+          </button>
+        </div>
       </div>
     </div>
   );

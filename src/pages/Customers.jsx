@@ -7,14 +7,6 @@ const Customers = () => {
 
   const customers = [
     { rowid: 1, id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-    { rowid: 2, id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' },
-    { rowid: 3, id: 3, name: 'Bob Johnson', email: 'bob.johnson@example.com' },
-    { rowid: 4, id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-    { rowid: 5, id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' },
-    { rowid: 6, id: 3, name: 'Bob Johnson', email: 'bob.johnson@example.com' },
-    { rowid: 7, id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-    { rowid: 8, id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' },
-    { rowid: 9, id: 3, name: 'Bob Johnson', email: 'bob.johnson@example.com' },
   ];
 
   return (
@@ -22,7 +14,7 @@ const Customers = () => {
       <div className="flex flex-wrap items-center justify-between pt-4 w-full mb-10">
         <h1 className="text-3xl font-normal font-custom">Customers</h1>
         <Link to="/dashboard/customers/addcustomer">
-          <button className="flex items-center bg-cpq-blue text-white border-0 rounded-md px-4 py-2 hover:shadow-xl hover:rounded-xl transition-all duration-300">
+          <button className="flex items-center bg-orange-500 hover:bg-orange-600  text-white border-0 rounded-md px-4 py-2 hover:shadow-xl hover:rounded-xl transition-all duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="12"
@@ -40,11 +32,11 @@ const Customers = () => {
         </Link>
       </div>
       {/* Search Bar */}
-      <div className="flex items-center border-2 border-gray-300 w-1/5 px-2 py-1 mb-12">
+      <div className="flex items-baseline border-2 rounded-lg border-gray-300 w-1/4 px-2 py-1 mb-12">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="16"
-          width="16"
+          height="14"
+          width="14"
           viewBox="0 0 512 512"
           className="fill-gray-500 mr-2"
         >
@@ -63,9 +55,9 @@ const Customers = () => {
       </div>
       {/* Customers */}
       <div className="w-full">
-        <table className="border-b-2 border-sky-950 w-full">
-          <thead className="w-full">
-            <tr className="bg-sky-100 border-0 rounded-lg">
+        <table className="w-full">
+          <thead>
+            <tr className="bg-orange-100">
               <th className="text-left font-medium p-2 text-sky-900">
                 Full Name
               </th>
@@ -76,7 +68,7 @@ const Customers = () => {
               <th></th>
             </tr>
           </thead>
-          <tbody className="border-b-2">
+          <tbody className="border-b-2 rounded-xl border-sky-950 w-full">
             {customers.map((customer) => {
               return (
                 <tr

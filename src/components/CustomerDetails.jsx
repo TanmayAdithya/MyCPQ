@@ -16,9 +16,9 @@ const CustomerDetails = () => {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
 
-  const onClick = () => {
-    console.log('Submited');
-  };
+  //Additional Information
+  const [additionalPhoneNum, setAdditionalPhoneNum] = useState();
+  const [additionalEmail, setAdditionalEmail] = useState('');
 
   return (
     <div>
@@ -47,7 +47,6 @@ const CustomerDetails = () => {
           </Link>
           <button
             type="/submit"
-            onChange={onClick}
             className="px-4 py-2 border-2 text-white border-orange-500 hover:border-orange-600 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 hover:rounded-md transition-all duration-300 uppercase rounded-sm bg-orange-500"
           >
             Update Customer
@@ -187,18 +186,26 @@ const CustomerDetails = () => {
           </h1>
         </div>
         <div className="w-full flex items-center">
-          <button className="flex items-center px-3 py-1 border-0 rounded-sm bg-slate-600 text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="12"
-              width="12"
-              viewBox="0 0 448 512"
-              className="mr-2 fill-white"
-            >
-              <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
-            </svg>
-            Add Additional Contact
-          </button>
+          <form action="">
+            <div className="bg-slate-50 mt-2 p-2 border-2 rounded-sm border-slate-300">
+              <input
+                className="bg-transparent font-semibold w-full text-slate-800 outline-none"
+                type="text"
+                placeholder="Additional Phone Number"
+                value={additionalPhoneNum}
+                onChange={(e) => setAdditionalPhoneNum(e.target.value)}
+              />
+            </div>
+            <div className="bg-slate-50 mt-2 p-2 border-2 rounded-sm border-slate-300">
+              <input
+                className="bg-transparent font-semibold w-full text-slate-800 outline-none"
+                type="emai"
+                placeholder="Additional Email"
+                value={additionalEmail}
+                onChange={(e) => setAdditionalEmail(e.target.value)}
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>

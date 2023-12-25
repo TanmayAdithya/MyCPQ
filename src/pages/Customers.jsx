@@ -1,13 +1,94 @@
-import { useState } from 'react';
 import Ellipses from '../assets/icons/ellipses';
 import { Link } from 'react-router-dom';
+// import { useCustomerContext } from '../context/CustomerContext';
 
 const Customers = () => {
-  const [customerInfo, setCustomerInfo] = useState('');
+  // const customerData = useCustomerContext();
 
-  const customers = [
-    { rowid: 1, id: 1, name: 'John Doe', email: 'john.doe@example.com' },
+  const customerData = [
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
+    {
+      customerId: '12',
+      customerName: 'Tanmay',
+      email: 'tanmay.marni@gmail.com',
+    },
   ];
+
+  // console.log('customerData: ', customerData);
 
   return (
     <div>
@@ -46,18 +127,16 @@ const Customers = () => {
           <input
             id="customer-info"
             type="text"
-            value={customerInfo}
-            onChange={(e) => setCustomerInfo(e.target.value)}
             placeholder="Search"
             className="outline-none w-full bg-transparent"
           />
         </form>
       </div>
       {/* Customers */}
-      <div className="w-full">
+      <div className="w-full bg-blue-200 border-0 rounded-t-xl">
         <table className="w-full">
           <thead>
-            <tr className="bg-orange-100">
+            <tr>
               <th className="text-left font-medium p-2 text-sky-900">
                 Full Name
               </th>
@@ -69,14 +148,14 @@ const Customers = () => {
             </tr>
           </thead>
           <tbody className="border-b-2 rounded-xl border-sky-950 w-full">
-            {customers.map((customer) => {
+            {customerData.map((customer) => {
               return (
                 <tr
-                  key={customer.rowid}
+                  key={customer.customerId}
                   className="border-b-2 border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors duration-300"
                 >
-                  <td className="p-2">{customer.name}</td>
-                  <td>{customer.id}</td>
+                  <td className="p-2">{customer.customerName}</td>
+                  <td>{customer.customerId}</td>
                   <td>{customer.email}</td>
                   <td>
                     <Ellipses />

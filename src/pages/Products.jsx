@@ -50,7 +50,7 @@ const Products = () => {
         </form>
       </div>
       {/* Products */}
-      <div className="w-full bg-orange-100 border-0 rounded-t-xl">
+      <div className="w-full bg-blue-200 border-0 rounded-t-xl">
         <table className="w-full">
           <thead>
             <tr>

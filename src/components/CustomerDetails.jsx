@@ -1,24 +1,46 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+// import { useCustomerContext } from '../context/CustomerContext';
 
 const CustomerDetails = () => {
+  // const addCustomer = useCustomerContext();
+
   // Customer Information
   const [customerName, setCustomerName] = useState('');
   const [customerId, setCustomerId] = useState('');
-  const [phoneNum, setPhoneNum] = useState();
+  const [phoneNum, setPhoneNum] = useState('');
   const [email, setEmail] = useState('');
 
   // Address
   const [addressLineOne, setAddressLineOne] = useState('');
   const [addressLineTwo, setAddressLineTwo] = useState('');
   const [addressLineThree, setAddressLineThree] = useState('');
-  const [zipCode, setZipCode] = useState();
+  const [zipCode, setZipCode] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
 
   //Additional Information
-  const [additionalPhoneNum, setAdditionalPhoneNum] = useState();
+  const [additionalPhoneNum, setAdditionalPhoneNum] = useState('');
   const [additionalEmail, setAdditionalEmail] = useState('');
+
+  // const handleAddCustomer = () => {
+  //   const customer = {
+  //     customerName,
+  //     customerId,
+  //     phoneNum,
+  //     email,
+  //     address: {
+  //       addressLineOne,
+  //       addressLineTwo,
+  //       addressLineThree,
+  //       zipCode,
+  //       city,
+  //       state,
+  //     },
+  //   };
+
+  //   addCustomer(customer);
+  // };
 
   return (
     <div>

@@ -1,9 +1,5 @@
 const Overview = () => {
-  return (
-    <div>
-      <h1 className="text-2xl font-medium p-4">Good morning, Buddy</h1>
-    </div>
-  );
+  return <div>Overview</div>;
 };
 
 export default Overview;

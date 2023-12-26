@@ -1,4 +1,3 @@
-import AnalyticsIcon from '../assets/icons/AnalyticsIcon.jsx';
 import ProductsIcon from '../assets/icons/ProductsIcon.jsx';
 import CustomersIcon from '../assets/icons/CustomersIcon.jsx';
 import DashboardIcon from '../assets/icons/DashboardIcon.jsx';
@@ -28,12 +27,6 @@ const Sidebar = () => {
       title: 'Products',
       path: '/dashboard/products',
       icon: <ProductsIcon />,
-    },
-    {
-      id: 3,
-      title: 'Analytics',
-      path: '/dashboard/analytics',
-      icon: <AnalyticsIcon />,
     },
   ];
   return (

@@ -1,13 +1,36 @@
+import {
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+} from '@tanstack/react-table';
+import { useState } from 'react';
+import ProductsData from '../data/ProductsData';
+
+const columns = [
+  {
+    accessorKey: 'name',
+    header: 'Product Name',
+    cell: (props) => <p>{props.getValue()}</p>,
+  },
+  {
+    accessorKey: 'category',
+    header: 'Category',
+    cell: (props) => <p>{props.getValue()}</p>,
+  },
+  {
+    accessorKey: 'basePrice',
+    header: 'Base Price',
+    cell: (props) => <p>{props.getValue()}</p>,
+  },
+];
+
 const Products = () => {
-  const products = [
-    {
-      rowid: 1,
-      id: 1,
-      name: 'Genwatt',
-      quantity: 2.0,
-      unitPrice: 79.9,
-    },
-  ];
+  const [products, setProducts] = useState(ProductsData);
+  const table = useReactTable({
+    data: products, // Renamed 'products' to 'data' for consistency
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  });
 
   return (
     <div>
@@ -49,37 +72,34 @@ const Products = () => {
           />
         </form>
       </div>
-      {/* Products */}
+      {/* Products Table */}
       <div className="w-full bg-blue-200 border-0 rounded-t-xl">
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th className="text-left font-medium p-2 text-sky-900">
-                Product Name
-              </th>
-              <th className="text-left font-medium text-sky-900">
-                Product Code
-              </th>
-              <th className="text-left font-medium text-sky-900">Quantity</th>
-              <th className="text-left font-medium text-sky-900">Unit Price</th>
-            </tr>
-          </thead>
-          <tbody className="border-b-2 rounded-xl border-sky-950 w-full">
-            {products.map((product) => {
-              return (
-                <tr
-                  key={product.rowid}
-                  className="border-b-2 border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors duration-300"
+        <div className="flex">
+          {table.getHeaderGroups().map((headerGroup) => (
+            <div key={headerGroup.id} className="flex flex-1 p-2">
+              {headerGroup.headers.map((header) => (
+                <div
+                  key={header.id}
+                  className="text-left w-full font-medium text-sky-900"
                 >
-                  <td className="p-2">{product.name}</td>
-                  <td>{product.id}</td>
-                  <td>{product.quantity}</td>
-                  <td>{`INR ${product.unitPrice}`}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                  {header.column.columnDef.header}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        {table.getRowModel().rows.map((row) => (
+          <div key={row.id} className="flex">
+            {row.getVisibleCells().map((cell) => (
+              <div
+                key={cell.id}
+                className="flex-1 p-2 border-b-2 border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors duration-300"
+              >
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

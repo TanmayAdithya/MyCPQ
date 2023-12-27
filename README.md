@@ -3,7 +3,7 @@
 <div id="top">
   <p align="center">
     <a href="https://github.com/TanmayAdithya/MyCPQ" target="_blank" rel="noopener noreferrer">
-      <img width="600" src="YourLogoURL" alt="MyCPQ-logo">
+      <img width="150" src="https://i.postimg.cc/FRJk9prr/My-CPQ-Logo-Inverse.png" alt="MyCPQ-logo">
     </a>
   </p>
 </div>

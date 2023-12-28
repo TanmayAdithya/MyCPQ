@@ -19,7 +19,7 @@
 
 <br>
 
-<p align="center">MyCPQ is an open-source Configure, Price, and Quote (CPQ) software designed to streamline business processes, manage products, and generate accurate quotes for small-scale businesses.</p>
+<p align="center">MyCPQ is an open-source Configure, Price, and Quote (CPQ) software inspired by Zenskar, designed to streamline business processes, manage products, and generate accurate quotes for small-scale businesses.</p>
 
 <br>
 

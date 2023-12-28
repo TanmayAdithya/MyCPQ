@@ -48,9 +48,7 @@ const CustomerDetails = () => {
         <span className="text-sm font-semibold uppercase text-slate-600">
           Customers/
         </span>
-        <span className="text-sm uppercase text-slate-500">
-          Update Customer
-        </span>
+        <span className="text-sm uppercase text-slate-500">Add Customer</span>
       </div>
       <div className="flex justify-between items-end border-b-2 pb-3 border-slate-300">
         <div className="flex flex-col justify-start">
@@ -58,7 +56,7 @@ const CustomerDetails = () => {
             Edit Customer
           </h1>
           <h2 className="text-md text-slate-500">
-            Update your customer profile information here
+            Add your customer profile information here
           </h2>
         </div>
         <div className="flex justify-between">
@@ -71,7 +69,7 @@ const CustomerDetails = () => {
             type="/submit"
             className="px-4 py-2 border-2 text-white border-orange-500 hover:border-orange-600 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 hover:rounded-md transition-all duration-300 uppercase rounded-sm bg-orange-500"
           >
-            Update Customer
+            Add Customer
           </button>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import ProductsData from '../data/ProductsData';
+
 const Overview = () => {
   return (
     <div className="pt-4 pr-4">
@@ -30,7 +32,7 @@ const Overview = () => {
           </ol>
         </div>
       </div>
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between mb-12">
         <div className="w-full">
           <h1 className="text-xl font-custom mb-4 w-fit">Recent Quotes</h1>
           <div className="flex bg-white shadow-md shadow-slate-300 border-0 rounded-xl p-4 items-center w-[80%]">
@@ -47,7 +49,7 @@ const Overview = () => {
           </div>
         </div>
         <div className="w-full">
-          <h1 className="text-xl font-custom mb-4 w-fit">Recent Customers</h1>
+          <h1 className="text-xl font-custom mb-4 w-fit">Recent products</h1>
           <div className="flex bg-white shadow-md shadow-slate-300 border-0 rounded-xl p-4 items-center w-[80%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +62,36 @@ const Overview = () => {
             </svg>
             <h2 className="text-md">Customer Name</h2>
           </div>
+        </div>
+      </div>
+      <div>
+        <div className="w-full bg-blue-200 border-0 rounded-t-xl">
+          <p className="p-2 text-2xl text-sky-900 font-custom">Products</p>
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th className="text-left font-medium p-2 text-sky-900">Name</th>
+                <th className="text-left font-medium text-sky-900">ID</th>
+                <th className="text-left font-medium text-sky-900">
+                  Base Price
+                </th>
+              </tr>
+            </thead>
+            <tbody className="border-b-2 rounded-xl border-sky-950 w-full">
+              {ProductsData.map((product) => {
+                return (
+                  <tr
+                    key={product.productId}
+                    className="border-b-2 border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors duration-300"
+                  >
+                    <td className="p-2">{product.name}</td>
+                    <td>{product.id}</td>
+                    <td>{product.basePrice}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
